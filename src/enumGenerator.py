@@ -13,6 +13,8 @@ class EnumGenerator:
     def __init__(self) -> None:
         self.generateMode = GenerateMode.NONE
         self.generator = None
+        self.fileDir = ''
+        self.outputDir = ''
         pass
 
     def setGenerateMode(self, mode):
@@ -22,11 +24,11 @@ class EnumGenerator:
     def startGenerate(self):
 
         if self.generateMode == GenerateMode.CPP:
-            self.generator = CPPEnumClassGenerator
-            self.generator.startGenerate()
+            self.generator = CPPEnumClassGenerator()
+            self.generator.startGenerate(self.fileDir, self.outputDir)
         elif self.generateMode == GenerateMode.RUST:
-            self.generator = RustEnumClassGenerator
-            self.generator.startGenerate()
+            self.generator = RustEnumClassGenerator()
+            self.generator.startGenerate(self.fileDir, self.outputDir)
         else:
             print("Start Generate Failed ! ! !")
 

@@ -1,0 +1,16 @@
+{
+    "Message" : {
+        "ConsoleWriteLine" : {
+            "ServerBindFunctionUnique" : 0,
+            "ClientRequestUnique" : 0
+        },
+        "TEST_MESSAGE" : {
+            "ServerBindFunctionUnique" : 1,
+            "ClientRequestUnique" : 1
+        },
+        "TEST_MESSAGE_2" : {
+            "ServerBindFunctionUnique" : 2,
+            "ClientRequestUnique" : 2
+        }
+    }
+}
